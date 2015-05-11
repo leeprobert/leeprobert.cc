@@ -1,7 +1,57 @@
+/*
+    VARIABLES
+*/
 body {
   font: "Montserrat", "Avenir", Arial, sans-serif;
   color: #333; }
 
+/* -----------------------------
+
+    MASKED IMAGES
+*/
+.masked {
+  -webkit-clip-path: polygon(20px 0%, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%, 0% 20px);
+  clip-path: polygon(20px 0%, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%, 0% 20px); }
+
+/* -----------------------------
+
+    BIOG
+*/
+.biog_avatar {
+  width: 20rem;
+  height: auto;
+  float: left;
+  position: relative;
+  left: -3rem; }
+
+.main-header nav li {
+  cursor: pointer;
+  font-family: "Slabo 27px", "Georgia", serif; }
+.main-header nav li:hover {
+  color: #444;
+  background: #bada55; }
+
+.biog_nav ul {
+  text-indent: 0;
+  padding: 0; }
+.biog_nav li {
+  text-align: center;
+  list-style-type: none;
+  margin: 2rem 0;
+  color: white;
+  padding: 1rem;
+  background: #444;
+  cursor: pointer;
+  font-size: 2rem;
+  font-family: "Slabo 27px", "Georgia", serif; }
+.biog_nav li:hover {
+  color: #444;
+  background: #bada55; }
+
+/* -----------------------------
+
+    HEADER
+*/
 .main-header {
   position: fixed;
   left: 0;
@@ -38,6 +88,17 @@ body {
 
 main {
   background: #EEE; }
+
+/* -----------------------------
+
+    FOOTER
+
+*/
+footer {
+  height: 12rem;
+  color: white;
+  background: #444;
+  padding: 4em; }
 
 /* -----------------------------
 
@@ -79,7 +140,7 @@ main {
     text-align: center;
     color: white; }
   .banner h1 {
-    font-family: 'Slabo 27px', 'Georgia', serif;
+    font-family: "Slabo 27px", "Georgia", serif;
     font-size: 800%; }
 
 .infoPanel {

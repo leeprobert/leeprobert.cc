@@ -16,4 +16,16 @@
         new headsUp( '.main-header' );
     }]);
     
+    app.controller('NavController', function(){
+       
+        this.scrollToTag = function(tag){
+         
+            var scrollTop = $('[name="' + tag + '"]').offset().top;
+                
+            $('html, body').animate({
+                scrollTop: scrollTop
+            }, scrollTop > 0? scrollTop : 2000);
+        }
+    });
+    
 })();

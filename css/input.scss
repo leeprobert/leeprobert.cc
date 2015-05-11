@@ -1,11 +1,95 @@
-$font-stack:    'Montserrat', 'Avenir', Arial, sans-serif;
+/*
+    VARIABLES
+*/
+
+$font-stack: 'Montserrat', 'Avenir', Arial, sans-serif;
+$font-stack2: 'Slabo 27px', 'Georgia', serif;
 $primary-color: #333;
+
+// Mask points
+$p1: 20px 0%;
+$p2: 100% 0;
+$p3: 100% calc(100% - 20px);
+$p4: calc(100% - 20px) 100%;
+$p5: 0% 100%;
+$p6: 0% 20px;
+
 
 body {
   font: $font-stack;
   color: $primary-color;
 }
 
+/* -----------------------------
+
+    MASKED IMAGES
+*/
+.masked {
+ 
+    -webkit-clip-path: polygon($p1, $p2, $p3, $p4, $p5, $p6);
+    clip-path: polygon($p1, $p2, $p3, $p4, $p5, $p6);
+}
+
+/* -----------------------------
+
+    BIOG
+*/
+.biog_avatar {
+ 
+    width: 20rem;
+    height: auto;
+    float: left;
+    position: relative;
+    left: -3rem;
+}
+
+.main-header nav {
+    
+    li {
+       
+        cursor: pointer;
+        font-family: $font-stack2;
+    }
+    
+    li:hover {
+        
+       color: #444;
+        background: #bada55; 
+    }
+}
+
+.biog_nav {
+ 
+    ul {
+        text-indent: 0;
+        padding: 0;
+    }
+    li {
+     
+        text-align: center;
+        list-style-type: none;
+        margin: 2rem 0;
+        
+        color: white;
+        padding: 1rem;
+        background: #444;
+        
+        cursor: pointer;
+        font-size: 2rem;
+        font-family: $font-stack2;
+    }
+    
+    li:hover {
+         
+            color: #444;
+            background: #bada55;
+        }
+}
+
+/* -----------------------------
+
+    HEADER
+*/
 .main-header {
   position: fixed;
   left: 0;
@@ -53,6 +137,20 @@ body {
 main { 
 
   background: #EEE;
+}
+
+/* -----------------------------
+
+    FOOTER
+
+*/
+
+footer {
+ 
+    height: 12rem;
+  color: white;
+  background: #444;
+    padding: 4em;
 }
 
 /* -----------------------------
@@ -106,6 +204,8 @@ main {
     overflow: hidden;
     display: table;
     
+//    box-shadow: inset 0 0 50px #fff;
+    
     .bannerTitles {
         
         display: table-cell;
@@ -118,7 +218,7 @@ main {
     }
 
     h1 {
-        font-family: 'Slabo 27px', 'Georgia', serif;
+        font-family: $font-stack2;
         font-size: 800%;   
     }
 }
